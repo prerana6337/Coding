@@ -154,5 +154,28 @@ the value stored in object is: 10
 the length of name name stored in object: 7
 1st val greates than 2 nd val.
 
-  
+--------------------------------------------------
+METHODS
+1.__call__() : instance can be directly called
+2. basic comparision methods: __lt__(),__gt__(),__ge__(),__eq__(),__ne__()
+3.__hash__() : decide obj/set/dict
+4.__iter__() : 
+5.__getitem__() : to acess index value or create ,
+  __setitem__() : set value which is created.
+--------------------------------------------------
 
+class numbers():
+    def __init__(self,mylist):
+        self.mylist=mylist
+    def __getitem__(self,index):
+        return self.mylist(index)
+    def __setitem__(self,index,val):
+        self.mylist[index]=val
+numlist=numbers([1,2,3,4,5])
+print(numlist)
+numlist[3]=10
+print(numlist.mylist)
+  
+Output:
+<__main__.numbers object at 0x000001A3E74026C0>
+[1, 2, 3, 10, 5]
